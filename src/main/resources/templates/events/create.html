@@ -29,10 +29,14 @@
     </div>
 
     <div class="mb-3">
-        <label class="form-label">Type of event:
-            <select th:field="${event.type}" class="form-select">
-                <option th:each="type : ${types}" th:value="${type}" th:text="${type.displayName}"></option>
+        <label class="form-label">Category:
+            <select th:field="${event.eventCategory}" class="form-select">
+                <option th:each="eventCategory : ${categories}"
+                        th:value="${eventCategory.id}"
+                        th:text="${eventCategory.name}">
+                </option>
             </select>
+                <p class="error" th:errors="${event.eventCategory}"></p>
         </label>
     </div>
 
