@@ -23,8 +23,8 @@
             <div class="form-group">
                 <td th:text="${event.id}"></td>
                 <td th:text="${event.name}"></td>
-                <td th:text="${event.description}"></td>
-                <td th:text="${event.contactEmail}"></td>
+                <td th:text="${event.eventDetails.description}"></td>
+                <td th:text="${event.eventDetails.contactEmail}"></td>
                 <td><input type="checkbox" name="eventIds" th:value="${event.id}" ></td>
             </div>
         </tr>

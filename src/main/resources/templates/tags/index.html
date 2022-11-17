@@ -5,16 +5,16 @@
 
 <header th:replace="fragments :: header"></header>
 
-<p th:unless="${categories} and ${categories.size()}">No Categories</p>
+<p th:unless="${tags} and ${tags.size()}">No Tags</p>
 
 <table class="table table-striped">
     <thead>
     <tr>
-        <th>Category Name</th>
+        <th>Tags</th>
     </tr>
     </thead>
-    <tr th:each="category : ${categories}">
-        <td><a th:text="${category.name}" th:href="'/events?categoryId=' + ${category.id}"></a></td>
+    <tr th:each="tag : ${tags}">
+        <td th:text="${tag.name}"</td>
     </tr>
 
 </table>
