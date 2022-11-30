@@ -19,7 +19,7 @@
         </thead>
         <tr th:each="tag : ${tags}">
             <div class="form-group">
-                <td th:text="${tag.name}"></td>
+                <td th:text="${tag.displayName}"></td>
                 <td><input type="checkbox" name="tagIds" th:value="${tag.id}" ></td>
             </div>
         </tr>
